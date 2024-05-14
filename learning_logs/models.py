@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Topic(models.Model):
     """A topic the user is learning about."""
     text = models.CharField(max_length=200)
@@ -10,6 +11,18 @@ class Topic(models.Model):
     def __str__(self):
         """Return a string representation of the model."""
         return self.text
+
+    def quantitat_de_lletres_diferents(self):
+        s = set([])
+
+        # Loop to traverse the string
+        for i in range(len(self.text)):
+            # Insert current character
+            # into the set
+            s.add(self.text[i])
+
+        # Return Answer
+        return len(s)
 
 
 class Entry(models.Model):
