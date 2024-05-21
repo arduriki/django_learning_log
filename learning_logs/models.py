@@ -12,17 +12,17 @@ class Topic(models.Model):
         """Return a string representation of the model."""
         return self.text
 
-    def quantitat_de_lletres_diferents(self):
-        s = set([])
-
-        # Loop to traverse the string
-        for i in range(len(self.text)):
-            # Insert current character
-            # into the set
-            s.add(self.text[i])
-
-        # Return Answer
-        return len(s)
+    # def quantitat_de_lletres_diferents(self):
+    #     s = set([])
+    #
+    #     # Loop to traverse the string
+    #     for i in range(len(self.text)):
+    #         # Insert current character
+    #         # into the set
+    #         s.add(self.text[i])
+    #
+    #     # Return Answer
+    #     return len(s)
 
 
 class Entry(models.Model):

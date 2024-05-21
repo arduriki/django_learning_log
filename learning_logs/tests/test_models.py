@@ -27,5 +27,5 @@ class TestModels(TestCase):
         self.assertEqual(self.entry1.text, 'another text to try')
         self.assertEqual(self.entry1.topic, self.topic1)
 
-    def test_quantitat_de_lletres_diferents(self):
-        self.assertEqual(self.topic1.quantitat_de_lletres_diferents(), len(set('test text')))
+    # def test_quantitat_de_lletres_diferents(self):
+    #     self.assertEqual(self.topic1.quantitat_de_lletres_diferents(), len(set('test text')))
